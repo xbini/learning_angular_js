@@ -4,9 +4,10 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "webpack serve --color --progress --config webpack/develop.js",
+    "start": "concurrently \"npm run serve\" \"npm run mock\"",
+    "serve": "webpack serve --color --progress --config webpack/develop.js",
     "build": "webpack build --color --progress --config webpack/build.js",
-    "mock": "json-server mock-server/db.json --routes mock-server/routes.json",
+    "mock": "json-server mock-server/db.json -r mock-server/routes.json -c mock-server/json-server.json -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,18 +24,22 @@
     "@babel/core": "7.18.5",
     "@babel/preset-env": "7.18.2",
     "babel-loader": "8.2.5",
+    "concurrently": "7.2.2",
     "css-loader": "6.7.1",
     "html-loader": "3.1.2",
     "html-webpack-plugin": "5.5.0",
     "json-server": "0.17.0",
     "mini-css-extract-plugin": "2.6.1",
+    "style-loader": "3.3.1",
     "webpack": "5.73.0",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.9.2"
   },
   "dependencies": {
     "angular": "1.6.0",
-    "angular-ui-router": "1.0.30",
+    "angular-ui-bootstrap": "2.5.6",
+    "angular-ui-router": "0.4.3",
+    "bootstrap": "3.4.1",
     "lodash": "4.17.21"
   }
 }

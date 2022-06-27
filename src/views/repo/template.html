@@ -1,0 +1,24 @@
+<div class="repo">
+    <h2>Repo list page</h2>
+    <progress ng-if="isLoadingRepos"></progress>
+    <table ng-if="!isLoadingRepos" class="table table-bordered">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+            <th>operations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="repo in repos track by repo.id">
+            <td ng-bind="repo.id"></td>
+            <td ng-bind="repo.title"></td>
+            <td ng-bind="repo.author"></td>
+            <td>
+                <input type="button" value="edit" ng-click="openEditDialog(repo)"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

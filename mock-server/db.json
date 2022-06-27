@@ -2,23 +2,27 @@
   "repos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "repo1",
+      "author": "Kong",
+      "description": "repo1"
     },
     {
       "id": 2,
-      "title": "json-server2",
-      "author": "typicode"
+      "title": "repo2",
+      "author": "Jex",
+      "description": "repo2"
     },
     {
       "id": 3,
-      "title": "json-server3",
-      "author": "typicode"
+      "title": "repo3",
+      "author": "Tom",
+      "description": "repo3"
     },
     {
       "id": 4,
-      "title": "json-server4",
-      "author": "typicode"
+      "title": "repo4",
+      "author": "Jerry",
+      "description": "repo4"
     }
   ]
 }

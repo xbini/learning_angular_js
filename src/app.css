@@ -1,3 +1,9 @@
+@import "~bootstrap";
+
 body {
-    background: antiquewhite;
+    padding: 10px;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
 }

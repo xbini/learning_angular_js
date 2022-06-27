@@ -1,12 +1,13 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router'
+import uiBootstrap from 'angular-ui-bootstrap'
 import { appRouter } from "./app-router";
-import { homeService } from "./services/home-service";
+import { repoService } from "./services/repo-service";
 
-const appModule = angular.module('app', [ uiRouter ]);
+const appModule = angular.module('app', [ uiRouter, uiBootstrap ]);
 
 appModule.config(appRouter);
 
-appModule.service("homeService", homeService);
+appModule.service("repoService", repoService);
 
 export { appModule }

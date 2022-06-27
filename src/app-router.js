@@ -1,8 +1,8 @@
-import { homeState } from "./views/home/state";
+import { repoState } from "./views/repo/state";
 
 const router = ($stateProvider, $urlRouterProvider) => {
-  $stateProvider.state(homeState)
-  $urlRouterProvider.when('', homeState.name);
+  $stateProvider.state(repoState)
+  $urlRouterProvider.when('', repoState.name);
 };
 
 const appRouter = [ "$stateProvider", "$urlRouterProvider", router ];

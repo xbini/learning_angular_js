@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const nodeModulesPath = path.resolve(__dirname, "../node_modules")
 const buildCommonConfig = () => {
@@ -37,6 +36,11 @@ const buildCommonConfig = () => {
             name: 'lodash',
             chunks: 'all',
           },
+          bootstrap: {
+            test: /[\\/]node_modules[\\/](bootstrap)[\\/]/,
+            name: 'bootstrap',
+            chunks: 'all',
+          },
         },
       },
     },
@@ -46,10 +50,6 @@ const buildCommonConfig = () => {
           test: /\.html$/i,
           loader: "html-loader",
           exclude: [ nodeModulesPath ]
-        },
-        {
-          test: /\.css$/i,
-          use: [ MiniCssExtractPlugin.loader, "css-loader" ],
         },
         {
           test: /\.js$/i,
@@ -67,9 +67,6 @@ const buildCommonConfig = () => {
       extensions: [ ".js", ".json", ".css" ],
     },
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: "[name].[chunkhash].css",
-      }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, '../src/app.html'),
         inject: 'body',
