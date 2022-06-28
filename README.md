@@ -19,7 +19,7 @@
 2. 添加弹窗，编辑内容
     1. 根据repo数据结构，自行设计弹窗页面，可以参考bootstrap样式
     2. 弹窗至少有`提交/取消`2个按钮
-    3. 约定提交repo提交的后端接口为`/api/repo/:id`, http method为POST
+    3. 约定提交repo提交的后端接口为`/api/repo/:id`, http method为PATCH
 3. 提交内容，跳转到详情
     1. 约定repo详情页为`/repos/:id`
     2. 需要显示repo所有字段, 页面结构自行设计，显示完所有字段即可
