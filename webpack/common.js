@@ -41,6 +41,11 @@ const buildCommonConfig = () => {
             name: 'bootstrap',
             chunks: 'all',
           },
+          'angular-ui-bootstrap': {
+            test: /[\\/]node_modules[\\/](angular-ui-bootstrap)[\\/]/,
+            name: 'angular-ui-bootstrap',
+            chunks: 'all',
+          },
         },
       },
     },
