@@ -1,0 +1,19 @@
+<body>
+<h2>Detail Page  </h2>
+<form>
+  <tr ng-repeat="repo in repos">
+    id:
+    <td> {{repo.id}} </td>
+    <br>
+    title:
+    <td> {{repo.title}} </td>
+    <br>
+    author:
+    <td> {{repo.author}} </td>
+    <br>
+</form>
+<div class="modal-footer">
+  <br>
+  <button class="btn btn-warning" type="button" ng-click="$scope.return()">return</button>
+  </div>
+</body>
