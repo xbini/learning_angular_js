@@ -1,5 +1,4 @@
 import popup from "./repo-popup/popup.html"
-import {popupController} from "./repo-popup/popup-controller";
 
 const Controller = function ($scope, $uibModal, repoService) {
   $scope.repos = [];
@@ -12,14 +11,16 @@ const Controller = function ($scope, $uibModal, repoService) {
   $scope.openEditDialog = (repo) => {
     console.log(repo)
     $uibModal.open({
+      animation: $scope.animationsEnabled,
+      ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
       template: popup,
-      // controller: popupController,
-      // resolve: {
-      //   repo: function () {
-      //     return $scope.repo;
-      //   }
-      // }
+      controller: 'popupController',
+      resolve: {
+        repos: function () {
+          return $scope.repos;
+        }
+      }
     });
   };
 }

@@ -1,15 +1,7 @@
-<!--引入package-->
-<html ng-app = "repo.demo">
-<head>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+<html>
     <script src="controller.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-</head>
 
-<div class="repo" ng-controller="repo">
+<div class="repo">
     <h2>Repo list page</h2>
     <progress ng-if="isLoadingRepos"></progress>
     <table ng-if="!isLoadingRepos" class="table table-bordered">

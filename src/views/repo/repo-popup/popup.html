@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <script src="popup-controller.js"></script>
+  <title>Popup</title>
+</head>
+<body>
+<form>
+    <div class="modal-body" id="modal-body" >
+      <label>Please select the item you want to edit</label>
+      <select name="repo" id="repo">
+        <option>id:</option>
+        <option>title: {{repo.title}}</option>
+        <option>author: {{repo.author}}</option>
+      </select>
+
+      <br>
+      Please input content you want to edit here:
+<input type="text" name="update" maxlength="20" minlength="1" />
+    </div>
+</form>
+</body>
+<div class="modal-footer">
+  <button class="btn btn-warning" type="button" ng-click="$scope.cancel()">Cancel</button>
+  <button class="btn btn-primary" type="submit" ng-click="$scope.submit()">Submit</button>
+</div>
