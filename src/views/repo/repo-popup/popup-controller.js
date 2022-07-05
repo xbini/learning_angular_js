@@ -1,9 +1,16 @@
-const Controller = function ($scope, $uibModalInstance, $stateParams) {
-  const repo = $stateParams.repo
-  console.log($stateParams.repo)
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel')
-  };
+const Controller = function ($scope, $uibModalInstance, repo) {
+  $scope.repo = repo;
+  $scope.id = repo.id;
+  $scope.title = repo.title;
+  $scope.author = repo.author;
+  console.log('repoinpopup',$scope.repo)
+  console.log('scopeid',$scope.id)
+
+
+  // $scope.cancel = function () {
+  //   $uibModalInstance.dismiss('cancel')
+  // };
+
 
   // const updateUrl = '/repo/id';
   // const data = $.param({
@@ -35,6 +42,6 @@ const Controller = function ($scope, $uibModalInstance, $stateParams) {
   // }
 }
 
-  const popupController = [$scope, Controller];
+  const popupController = ["$scope", "$uibModalInstance", "repo", Controller];
 
   export {popupController}

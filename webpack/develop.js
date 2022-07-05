@@ -17,7 +17,7 @@ module.exports = {
   },
   devServer: {
     compress: true,
-    port: 1001,
+    port: 1002,
     proxy: {
       '/api': 'http://localhost:1100',
     },
