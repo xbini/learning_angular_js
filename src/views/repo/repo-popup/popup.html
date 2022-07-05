@@ -5,21 +5,19 @@
 <body>
 <form>
     <div class="modal-body" id="modal-body">
-      <label>Please select the item you want to edit</label>
-      <select name="repo" id="repo">
-        <option ng-model="repo.id"> id: {{repo.id}} </option>
-        <option ng-model="repo.title">title: {{repo.title}}</option>
-        <option ng-model="repo.author">author: {{repo.author}}</option>
-      </select>
-      <br>
-      <br>
-      Please input content you want to edit here:
-<input type="text" ng-model="changedContent" maxlength="20" minlength="1"/>
+      <label>Please input the content you want to edit :</label>
+      <table>
+        <tr>
+          <td>id :<input type="number" min="0" ng-model="repo.id"></td>
+          <td>title : <input type="text" ng-model="repo.title"></td>
+          <td>author :<input type="text" ng-model="repo.author"></td>
+        </tr>
+      </table>
       <br>
     </div>
 </form>
 </body>
 <div class="modal-footer">
   <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-  <button class="btn btn-primary" type="submit" ng-click="submit()">Submit</button>
+  <button class="btn btn-primary" type="submit" ng-click="submit(inputContent)">Submit</button>
 </div>
