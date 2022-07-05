@@ -14,12 +14,12 @@
       <br>
       <br>
       Please input content you want to edit here:
-<input type="text" name="update" maxlength="20" minlength="1"/>
+<input type="text" ng-model="changedContent" maxlength="20" minlength="1"/>
       <br>
     </div>
 </form>
 </body>
 <div class="modal-footer">
-  <button class="btn btn-warning" type="button" ng-click="$scope.cancel()">Cancel</button>
-  <button class="btn btn-primary" type="submit" ng-click="$scope.submit()">Submit</button>
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+  <button class="btn btn-primary" type="submit" ng-click="submit()">Submit</button>
 </div>

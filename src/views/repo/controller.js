@@ -1,7 +1,7 @@
 import popup from "./repo-popup/popup.html"
 import {popupController} from "./repo-popup/popup-controller";
 
-const Controller = function ($scope, $uibModal,  repoService) {
+const Controller = function ($scope, $uibModal, repoService) {
   $scope.repos = [];
   $scope.isLoadingRepos = true;
   repoService.loadRepos()

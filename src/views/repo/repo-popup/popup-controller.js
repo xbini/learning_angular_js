@@ -3,16 +3,16 @@ const Controller = function ($scope, $uibModalInstance, repo) {
   $scope.id = repo.id;
   $scope.title = repo.title;
   $scope.author = repo.author;
-  console.log('repoinpopup',$scope.repo)
-  console.log('scopeid',$scope.id)
 
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
 
-  // $scope.cancel = function () {
-  //   $uibModalInstance.dismiss('cancel')
-  // };
+  $scope.changedContent = function (input){
 
+  };
 
-  // const updateUrl = '/repo/id';
+  const updateUrl = '/repo/id';
   // const data = $.param({
   //   id: repo.id,
   //   title: repo.title,
@@ -24,22 +24,20 @@ const Controller = function ($scope, $uibModalInstance, repo) {
   //   }
   // }
 
-  // $scope.submit = function () {
-  //   const id = $scope.repo.id;
-  //   const title = $scope.repo.title;
-  //   const author = $scope.repo.author;
-  //   //success -> state go 详情页面
-  //   // error -> 报错
-  //   this.updateRepos = () => $http.patch(updateUrl, data, config)
-  //   .success(function () {
-  //     $state.go('xxxxxxxx')
-  //   })
-  //
-  //   .error(function () {
-  //     alert('error');
-  //   })
-  //
-  // }
+  $scope.submit = function () {
+    const id = $scope.id;
+    const title = $scope.title;
+    const author = $scope.author;
+    this.updateRepos = () => $http.patch(updateUrl, data)
+    .then(function () {
+      $state.go('xxxxxxxx')
+    })
+
+    .error(function () {
+      alert('error');
+    })
+
+  }
 }
 
   const popupController = ["$scope", "$uibModalInstance", "repo", Controller];
