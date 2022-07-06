@@ -1,5 +1,3 @@
-import popup from "./repo-popup/popup.html"
-
 const Controller = function ($scope, $uibModal, repoService) {
   $scope.repos = [];
   $scope.isLoadingRepos = true;
@@ -17,14 +15,18 @@ const Controller = function ($scope, $uibModal, repoService) {
       template: popup,
       controller: 'popupController',
       resolve: {
-        repos: function () {
-          return $scope.repos;
+        repo: function () {
+          return repo;
         }
       }
     });
   };
+
+  $scope.return = function () {
+    $state.go('/repo')
+  }
 }
 
-const repoController = [ "$scope", "$uibModal", "repoService", Controller ];
+const repoDetailController = [ "$scope", "$uibModal", "repoService", Controller ];
 
-export {repoController }
+export {repoDetailController}
