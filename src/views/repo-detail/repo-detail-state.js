@@ -4,7 +4,7 @@ import './repo-detail-style.css';
 
 const repoDetailState = {
   name: 'repoDetail',
-  url: '/repo/id',
+  url: '/repos/:id',
   repoDetail,
   controller: repoDetailController
 }
