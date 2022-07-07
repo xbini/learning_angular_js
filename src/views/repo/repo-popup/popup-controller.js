@@ -28,15 +28,23 @@ const Controller = function ($scope, $uibModalInstance, $state, $http, repo ) {
     console.log('$scope.repo', $scope.repo)
 
 
-    $scope.dataUpdate = () => $http.patch(
-        'repos/:id', $scope.repo)
+    const dataUpdate = $http.patch('repos/:id', $scope.repo);
+    dataUpdate.then(function (res){
+      $scope.repo = res.repo;
+    });
+
+    // $state.go('xxxxxxx'){$scope.repo}
+
+    console.log('scope.update',dataUpdate)
+    // $scope.dataUpdate = () => $http.patch(
+    //     'repos/:id', $scope.repo)
     // .then(function successCallback(repo){
     //   repo = $scope.repo
     //     },
     //     function errorCallback(response){
     //     }
-    // );
-    console.log('scope.update',$scope.dataUpdate())
+    // // );
+    // console.log('scope.update',$scope.dataUpdate())
     $uibModalInstance.close();
 
     // $scope.dataUpdate = function (){
