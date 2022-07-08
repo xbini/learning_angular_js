@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<head>
-  <script src="popup-controller.js"></script>
-  <link rel="stylesheet" type="text/css" href="popup.css">
-</head>
-<body>
-<form name="popup">
+<div class="popup-container">
+  <form name="popup">
     <div class="modal-body" id="modal-body">
       <br>
       <label>Please input the content you want to edit :</label>
       <br>
       <table>
         <tr>
-          <td>id :<input type="number" min="0"  ng-model="id" required></td>
-<!--          <span ng-show="popup.id.$invalid">the id filed can not be empty</span>-->
+<!--          <td>id: {{id}}</td>-->
+          <!--          <span ng-show="popup.id.$invalid">the id filed can not be empty</span>-->
           <td>title : <input type="text" ng-model="title"></td>
           <td>author :<input type="text" ng-model="author"></td>
+          <td>description : <input type="text" ng-model="description"></td>
         </tr>
       </table>
       <br>
     </div>
-</form>
-</body>
-<div class="modal-footer">
-  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-  <button class="btn btn-primary" type="submit" ng-click="edit()">Submit</button>
+  </form>
+  <div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" type="submit" ng-click="submit()">Submit</button>
+  </div>
 </div>

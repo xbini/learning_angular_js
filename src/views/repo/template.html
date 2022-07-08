@@ -1,5 +1,3 @@
-<html>
-    <script src="controller.js"></script>
 
 <div class="repo">
     <h2>Repo list page</h2>
@@ -10,6 +8,7 @@
             <th>id</th>
             <th>title</th>
             <th>author</th>
+            <th>description</th>
             <th>operations</th>
         </tr>
         </thead>
@@ -18,6 +17,7 @@
             <td ng-bind="repo.id"></td>
             <td ng-bind="repo.title"></td>
             <td ng-bind="repo.author"></td>
+            <td ng-bind="repo.description"></td>
             <td>
                 <input type="button" value="edit" ng-click="openEditDialog(repo)"/>
             </td>
@@ -25,4 +25,3 @@
         </tbody>
     </table>
 </div>
-</html>

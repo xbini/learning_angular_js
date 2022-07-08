@@ -1,5 +1,7 @@
 import popup from "./repo-popup/popup.html"
 import {popupController} from "./repo-popup/popup-controller";
+import './style.css'
+import _ from "lodash";
 
 const Controller = function ($scope, $uibModal, repoService) {
   $scope.repos = [];
@@ -9,6 +11,7 @@ const Controller = function ($scope, $uibModal, repoService) {
     $scope.repos = res.data
   })
   .finally(() => $scope.isLoadingRepos = false);
+
   $scope.openEditDialog = (repo) => {
     console.log(repo)
     $uibModal.open({
@@ -17,7 +20,7 @@ const Controller = function ($scope, $uibModal, repoService) {
       controller: popupController,
       resolve: {
         repo: function () {
-          return repo;
+          return _.cloneDeep(repo);
         }
       }
     });

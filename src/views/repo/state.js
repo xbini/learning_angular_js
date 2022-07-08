@@ -3,10 +3,10 @@ import template from './template.html';
 import './style.css';
 
 const repoState = {
-  name: 'repo',
-  url: '/repo',
-  template,
+  name: 'repos',
+  url: '/repos',
+  template: template,
   controller: repoController
 }
 
-export {repoState}
+export {repoState }

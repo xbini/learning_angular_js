@@ -5,8 +5,8 @@ import './repo-detail-style.css';
 const repoDetailState = {
   name: 'repoDetail',
   url: '/repos/:id',
-  repoDetail,
-  controller: repoDetailController
+  template: repoDetail,
+  controller: repoDetailController,
 }
 
 export { repoDetailState}
