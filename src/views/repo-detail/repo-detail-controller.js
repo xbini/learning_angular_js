@@ -12,6 +12,7 @@ const Controller = function ($scope, $state, $http, $stateParams, $window) {
   $scope.getRepoById(id);
 
   $scope.return = function () {
+    // fixme: 这里可以直接使用$state.go('/repos')？
     const repoPage = $window.location.href;
     $window.history.back();
     $window.onpopstate = function() {

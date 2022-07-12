@@ -3,7 +3,7 @@
 ## 启动
 
 1. `npm i` 安装依赖
-2. `npm run start` 启动本地，浏览器访问http://localhost:1001/
+2. `npm run start` 启动本地，浏览器访问http://localhost:1002/
 
 ## 学习资料
 

@@ -1,3 +1,4 @@
+<!--fixme: body，html这一类标签在单页应用里只出现在html根文件中，也就是app.html， controller的template不必要添加，所有的的template都会渲染到ui-view中，如果只是用来做组件布局容器，直接用div-->
 <body>
 <h2>Repo Detail Page</h2>
 <table class= "table table-bordered">
@@ -19,5 +20,6 @@
   <br>
   <button class="btn btn-warning" type="button" ng-click="return()">return</button>
   </div>
+<!--fixme: 我们这里没用用到子路由，这里没有必要加这个ui-view，这个detail state也不会渲染到这里，而是渲染到app.html的ui-view-->
 <div ui-view="repoDetailPage"></div>
 </body>
