@@ -1,21 +1,27 @@
 <div class="popup-container">
-  <form name="popup">
+  <form>
     <div class="modal-body" id="modal-body">
       <br>
-      <label>Please input the content you want to edit :</label>
+      <label>Please input the content of new repo :</label>
       <br>
-      <table>
+      <form>
         <tr>
+          <td >id <span id="redStar">*</span> :
+              <input type="number" ng-model="id" required min="1" max="10000">
+            </td>
+          <br>
           <td>title : <input type="text" ng-model="title"></td>
+          <br>
           <td>author :<input type="text" ng-model="author"></td>
+          <br>
           <td>description : <input type="text" ng-model="description"></td>
         </tr>
-      </table>
+      </form>
       <br>
     </div>
   </form>
   <div class="modal-footer">
     <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-    <button class="btn btn-primary" type="submit" ng-click="submit()">Submit</button>
+    <button class="btn btn-primary" type="submit" ng-click="confirm(id,title,author,description)">Confirm</button>
   </div>
 </div>

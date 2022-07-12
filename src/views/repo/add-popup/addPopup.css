@@ -1,0 +1,7 @@
+.popup-container input:required:invalid {
+  border-color: #c00000;
+}
+
+#redStar{
+  color: red;
+}

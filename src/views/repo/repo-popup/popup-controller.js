@@ -72,7 +72,8 @@ const Controller = function ($scope, $uibModalInstance, $state, $http, repo) {
           {id: $scope.repo.id},
           {reload:true});
       $uibModalInstance.close();
-    }).catch(e => console.error(e));
+    })
+    .catch(e => console.error(e));
     console.log('$scope.repo',$scope.repo)
 
   };
