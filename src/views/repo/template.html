@@ -1,6 +1,12 @@
 
 <div class="repo">
-    <h2>Repo list page</h2>
+    <div>
+        <h2>Repo list page</h2>
+        <button class="btn btn-primary" type="button" id="displayRight" ng-click="add()">add</button>
+        <br>
+        <br>
+    </div>
+
     <progress ng-if="isLoadingRepos"></progress>
     <table ng-if="!isLoadingRepos" class="table table-bordered">
         <thead>
@@ -20,8 +26,12 @@
             <td ng-bind="repo.description"></td>
             <td>
                 <input type="button" value="edit" ng-click="openEditDialog(repo)"/>
+                <input type="button" value="delete" ng-click="delete()"/>
             </td>
         </tr>
         </tbody>
     </table>
+    <div class="modal-footer" id="modal-footer">
+
+    </div>
 </div>

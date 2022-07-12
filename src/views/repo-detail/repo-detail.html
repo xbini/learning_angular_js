@@ -8,16 +8,13 @@
     <th>description</th>
   </tr>
   <tr>
-    <td> {{repo.id}} </td>
-    <td> {{repo.title}} </td>
-    <td> {{repo.author}} </td>
-    <td> {{repo.description}} </td>
+    <td ng-bind="repo.id"> </td>
+    <td ng-bind="repo.title"> </td>
+    <td ng-bind="repo.author"> </td>
+    <td ng-bind="repo.description"> </td>
 
   </tr>
 </table>
-<div class="modal-footer">
   <br>
   <button class="btn btn-warning" type="button" ng-click="return()">return</button>
-  </div>
-<div ui-view="repoDetailPage"></div>
 </body>

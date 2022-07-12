@@ -25,6 +25,11 @@ const Controller = function ($scope, $uibModal, repoService) {
       }
     });
   };
+
+  $scope.delete = function (repo) {
+    const index = $scope.repos.indexOf(repo);
+    $scope.repos.splice(index,1);
+  }
 }
 
 const repoController = [ "$scope", "$uibModal", "repoService", Controller ];
