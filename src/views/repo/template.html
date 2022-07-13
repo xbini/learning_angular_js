@@ -11,12 +11,12 @@
     <table ng-if="!isLoadingRepos" class="table table-bordered">
         <thead>
         <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>author</th>
-            <th>description</th>
-            <th>date</th>
-            <th>stars</th>>
+            <th style="width:150px">id</th>
+            <th style="width:150px">title</th>
+            <th style="width:150px">author</th>
+            <th style="width:450px">description</th>
+            <th style="width:300px">date</th>
+            <th style="width:150px">stars</th>
             <th>operations</th>
         </tr>
         </thead>
@@ -26,8 +26,14 @@
             <td ng-bind="repo.title"></td>
             <td ng-bind="repo.author"></td>
             <td ng-bind="repo.description"></td>
-            <td ng-bind="repo.date"></td>
-            <td ng-bind="repo.stars"></td>
+            <td ng-bind="repo.date | date:'EEE MMM yyyy hh:mm:ss Z' "></td>
+            <td>
+            <span ng-if= "repo.stars == 0 " id="bg-color-grey" ng-bind="repo.stars"></span>
+            <span ng-if=" 100 > repo.stars && repo.stars > 0 " id="bg-color-green" ng-bind="repo.stars"></span>
+            <span ng-if=" 1000 > repo.stars && repo.stars >= 100 " id="bg-color-orange" ng-bind="repo.stars"></span>
+            <span ng-if=" repo.stars >= 1000" id="bg-color-red" ng-bind="repo.stars"></span>
+            </td>
+
             <td>
                 <input type="button" value="edit" ng-click="openEditDialog(repo)"/>
                 <input type="button" value="delete" ng-click="delete(repo)"/>

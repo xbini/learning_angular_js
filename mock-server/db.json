@@ -5,8 +5,8 @@
       "title": "repo",
       "author": "Jex",
       "description": "repo2",
-      "date": 1657697358116,
-      "stars": 1
+      "date": "2022-06-14T16:00:00.000Z",
+      "stars": "9"
     },
     {
       "id": 3,
@@ -14,7 +14,7 @@
       "author": "Tom",
       "description": "repo3",
       "date": 1657697358116,
-      "stars": 2
+      "stars": 200
     },
     {
       "id": 4,
@@ -22,7 +22,7 @@
       "author": "Jerry",
       "description": "repo4",
       "date": 1657697358116,
-      "stars": 3
+      "stars": 30
     },
     {
       "id": 5,
@@ -30,7 +30,7 @@
       "author": "grace",
       "description": "no",
       "date": 1657697358116,
-      "stars": 4
+      "stars": 4000
     },
     {
       "id": 6,
@@ -38,7 +38,7 @@
       "author": "test",
       "description": "test",
       "date": 1657697358116,
-      "stars": 5
+      "stars": 0
     }
   ]
 }

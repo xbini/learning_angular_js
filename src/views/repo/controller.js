@@ -5,14 +5,18 @@ import {addPopupController} from "./add-popup/addPopup-controller";
 import './style.css'
 import _ from "lodash";
 
-const Controller = function ($scope, $uibModal, $http, repoService,$window) {
+const Controller = function ($scope, $uibModal, $http, repoService, $window) {
   $scope.repos = [];
   $scope.isLoadingRepos = true;
   repoService.loadRepos()
   .then(res => {
     $scope.repos = res.data
+    console.log('res.data',res.data)
   })
   .finally(() => $scope.isLoadingRepos = false);
+
+
+  $scope.dateFormat = ((new Date().valueOf()))
 
   $scope.openEditDialog = (repo) => {
     console.log(repo)

@@ -7,6 +7,9 @@ const Controller = function ($scope, $uibModalInstance, $http, $window) {
   $scope.title = null;
   $scope.author = null;
   $scope.description = null;
+  // $scope.date = null;
+  $scope.stars = null;
+
 
   $scope.cancel = function () {
     $uibModalInstance.close();
@@ -16,7 +19,9 @@ const Controller = function ($scope, $uibModalInstance, $http, $window) {
       id: id,
       title: title,
       author: author,
-      description: description
+      description: description,
+      date:this.date,
+      stars:this.stars
     };
 
     $http.post('/api/repos', repo).then(function (response) {
@@ -24,7 +29,6 @@ const Controller = function ($scope, $uibModalInstance, $http, $window) {
         $uibModalInstance.close();
     }, function (response) {
         }
-
     );
     $window.location.reload();
   };

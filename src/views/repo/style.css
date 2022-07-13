@@ -17,3 +17,23 @@
   margin-right: 20px;
 
 }
+
+#bg-color-red{
+background-color: red;
+  color: white;
+ }
+
+#bg-color-orange{
+  background-color: orange;
+  color: white;
+}
+
+#bg-color-grey{
+  background-color: grey;
+  color: white;
+}
+
+#bg-color-green{
+  background-color: green;
+  color: white;
+}
