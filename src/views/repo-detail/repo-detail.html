@@ -1,6 +1,8 @@
-<body>
+<div class="loader" ng-if="isLoading">Loading...</div>
+<body >
+<div ng-if="!isLoading">
 <h2>Repo Detail Page</h2>
-<table class= "table table-bordered">
+<table class= "table table-bordered" >
   <tr>
     <th>id</th>
     <th>title</th>
@@ -17,4 +19,5 @@
 </table>
   <br>
   <button class="btn btn-warning" type="button" ng-click="return()">return</button>
+</div>
 </body>

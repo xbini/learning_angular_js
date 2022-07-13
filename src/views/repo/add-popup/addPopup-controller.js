@@ -2,7 +2,7 @@ import './addPopup.css'
 import './addPopup.html'
 
 const Controller = function ($scope, $uibModalInstance, $http, $window) {
-  // $scope.repo = null;
+  $scope.repo = [];
   $scope.id = null;
   $scope.title = null;
   $scope.author = null;
@@ -18,11 +18,14 @@ const Controller = function ($scope, $uibModalInstance, $http, $window) {
       author: author,
       description: description
     };
-    $http.post('/api/repos', JSON.stringify(repo)).then(function (response) {
+
+    $http.post('/api/repos', repo).then(function (response) {
       if (response.repo)
         $uibModalInstance.close();
     }, function (response) {
-    });
+        }
+
+    );
     $window.location.reload();
   };
 

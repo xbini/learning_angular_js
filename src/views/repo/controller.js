@@ -5,7 +5,7 @@ import {addPopupController} from "./add-popup/addPopup-controller";
 import './style.css'
 import _ from "lodash";
 
-const Controller = function ($scope, $uibModal, $http, repoService) {
+const Controller = function ($scope, $uibModal, $http, repoService,$window) {
   $scope.repos = [];
   $scope.isLoadingRepos = true;
   repoService.loadRepos()
@@ -35,46 +35,16 @@ const Controller = function ($scope, $uibModal, $http, repoService) {
       controller: addPopupController,
     });
   };
-  // $scope.deleteRepo = (repo) => $http.delete("/api/repos",repo);
-  // $scope.appendRepo
 
-  $scope.delete = function (repo){
-      // const index = $scope.repos.indexOf(repo);
-      // $scope.repos.splice(index,1);
-    const data = repo;
-    $http.delete('/api/repos', JSON.stringify(data)).then(function (response) {
-      console.log('data',JSON.stringify(data))
-      if (response.data)
-
-        $scope.msg = "Data Deleted Successfully!";
-
-    }, function (response) {
-
-      $scope.msg = "Service not Exists";
-
-      $scope.statusval = response.status;
-
-      $scope.statustext = response.statusText;
-
-      $scope.headers = response.headers();
-
-    });
-
+  $scope.delete = function (repo) {
+    repoService.deleteRepo(repo.id)
+    .then(() => console.log("success"));
+    $window.location.reload();
   };
 
-
 }
-  // repoService.deleteRepo()
-  // .then(res => {
-  //   $scope.repos = res.data
-  // })
-  //     = function (repo) {
-  //   const index = $scope.repos.indexOf(repo);
-  //   $scope.repos.splice(index,1);
-  // }
 
+const repoController = ["$scope", "$uibModal", "$http", "repoService","$window",
+  Controller];
 
-
-const repoController = [ "$scope", "$uibModal","$http", "repoService", Controller ];
-
-export {repoController }
+export {repoController}

@@ -6,9 +6,9 @@
       <br>
       <table>
         <tr>
-          <td>title : <input type="text" ng-model="title"></td>
-          <td>author :<input type="text" ng-model="author"></td>
-          <td>description : <input type="text" ng-model="description"></td>
+          <td>title : <input type="text" ng-model="repo.title"></td>
+          <td>author :<input type="text" ng-model="repo.author"></td>
+          <td>description : <input type="text" ng-model="repo.description"></td>
         </tr>
       </table>
       <br>
@@ -16,6 +16,6 @@
   </form>
   <div class="modal-footer">
     <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-    <button class="btn btn-primary" type="submit" ng-click="submit()">Submit</button>
+    <button class="btn btn-primary" type="submit" ng-click="submit(repo)">Submit</button>
   </div>
 </div>

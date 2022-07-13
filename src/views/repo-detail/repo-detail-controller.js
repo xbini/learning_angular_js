@@ -1,30 +1,24 @@
-const Controller = function ($scope, $state, $http, $stateParams, $window, repoService) {
-  const id = $stateParams.id;
-  console.log('id',id)
+const Controller = function ($scope, $state, $http, $stateParams, $window,
+    repoService) {
 
-  // repoService.getRepoById(id)
-  // .then(res => {
-  //   $scope.repo = res.data
-  // })
-  // error: Cannot read properties of undefined (reading 'getRepoById')
-
-  $scope.getRepoById = function(id) {
-    $http.get("/api/repos/" + id).then(function(response){
-      $scope.repo = response.data;
-      // repo = $scope.repo;
-      // console.log("getreallyrepo",repo);
-    });
+  $scope.setLoading = function(loading) {
+    $scope.isLoading = loading;
   }
-
-
-  $scope.getRepoById(id);
-
+  const id = $stateParams.id;
+  $scope.setLoading(true);
+  repoService.getRepoById(id)
+  .then(function (response) {
+    $scope.repo = response.data
+  })
+  .finally(() => $scope.setLoading(false));
   $scope.return = function () {
-    $window.history.back();
-    // $state.go('/repos');
-    // error: cannot resolve /repos from state repo-detail
+    $state.go('repos');
+
   };
+
 }
-const repoDetailController = [ "$scope", "$state", "$http","$stateParams", "$window", Controller ];
+
+const repoDetailController = ["$scope", "$state", "$http", "$stateParams",
+  "$window", "repoService", Controller];
 
 export {repoDetailController}

@@ -7,11 +7,6 @@ const repoDetailState = {
   url: '/repos/:id',
   template: repoDetail,
   controller: repoDetailController,
-  // resolve: {
-  //   repo: function () {
-  //     return repo;
-  //   }
-  // }
 }
 
-export { repoDetailState}
+export { repoDetailState }

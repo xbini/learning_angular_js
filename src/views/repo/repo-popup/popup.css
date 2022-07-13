@@ -1,3 +1,4 @@
 .popup-container input:required:invalid {
   border-color: #c00000;
 }
+
