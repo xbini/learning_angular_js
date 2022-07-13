@@ -1,22 +1,22 @@
 <div class="loader" ng-if="isLoading">Loading...</div>
 <body >
 <div ng-if="!isLoading">
-<h2>Repo Detail Page</h2>
-<table class= "table table-bordered" >
-  <tr>
-    <th>id</th>
-    <th>title</th>
-    <th>author</th>
-    <th>description</th>
-  </tr>
-  <tr>
-    <td ng-bind="repo.id"> </td>
-    <td ng-bind="repo.title"> </td>
-    <td ng-bind="repo.author"> </td>
-    <td ng-bind="repo.description"> </td>
+  <h2>Repo Detail Page</h2>
+  <table class= "table table-bordered" >
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>author</th>
+      <th>description</th>
+    </tr>
+    <tr>
+      <td ng-bind="repo.id"> </td>
+      <td ng-bind="repo.title"> </td>
+      <td ng-bind="repo.author"> </td>
+      <td ng-bind="repo.description"> </td>
 
-  </tr>
-</table>
+    </tr>
+  </table>
   <br>
   <button class="btn btn-warning" type="button" ng-click="return()">return</button>
 </div>
