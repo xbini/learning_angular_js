@@ -2,33 +2,43 @@
   "repos": [
     {
       "id": 2,
-      "title": "repo2",
+      "title": "repo",
       "author": "Jex",
-      "description": "repo2"
+      "description": "repo2",
+      "date": 1657697358116,
+      "stars": 1
     },
     {
       "id": 3,
       "title": "repo3",
       "author": "Tom",
-      "description": "repo3"
+      "description": "repo3",
+      "date": 1657697358116,
+      "stars": 2
     },
     {
       "id": 4,
       "title": "repo4",
       "author": "Jerry",
-      "description": "repo4"
+      "description": "repo4",
+      "date": 1657697358116,
+      "stars": 3
     },
     {
       "id": 5,
       "title": "repo5",
       "author": "grace",
-      "description": "no"
+      "description": "no",
+      "date": 1657697358116,
+      "stars": 4
     },
     {
       "id": 6,
       "title": "repo test",
       "author": "test",
-      "description": "test"
+      "description": "test",
+      "date": 1657697358116,
+      "stars": 5
     }
   ]
 }

@@ -15,6 +15,8 @@
             <th>title</th>
             <th>author</th>
             <th>description</th>
+            <th>date</th>
+            <th>stars</th>>
             <th>operations</th>
         </tr>
         </thead>
@@ -24,6 +26,8 @@
             <td ng-bind="repo.title"></td>
             <td ng-bind="repo.author"></td>
             <td ng-bind="repo.description"></td>
+            <td ng-bind="repo.date"></td>
+            <td ng-bind="repo.stars"></td>
             <td>
                 <input type="button" value="edit" ng-click="openEditDialog(repo)"/>
                 <input type="button" value="delete" ng-click="delete(repo)"/>
