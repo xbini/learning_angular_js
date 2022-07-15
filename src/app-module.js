@@ -10,4 +10,6 @@ appModule.config(appRouter);
 
 appModule.service("repoService", repoService);
 
+appModule.directive("stars",)
+
 export { appModule }

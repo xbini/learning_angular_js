@@ -27,12 +27,14 @@
             <td ng-bind="repo.author"></td>
             <td ng-bind="repo.description"></td>
             <td ng-bind="repo.date | date:'EEE MMM yyyy hh:mm:ss Z' "></td>
-            <td>
-            <span ng-if= "repo.stars == 0 " id="bg-color-grey" ng-bind="repo.stars"></span>
-            <span ng-if=" 100 > repo.stars && repo.stars > 0 " id="bg-color-green" ng-bind="repo.stars"></span>
-            <span ng-if=" 1000 > repo.stars && repo.stars >= 100 " id="bg-color-orange" ng-bind="repo.stars"></span>
-            <span ng-if=" repo.stars >= 1000" id="bg-color-red" ng-bind="repo.stars"></span>
-            </td>
+<!--            <td><stars > </stars> </td>-->
+            <td><stars ng-bind="repo.stars"> </stars> </td>
+<!--            <span ng-if= "repo.stars == 0 " id="bg-color-grey" ng-bind="repo.stars"></span>-->
+<!--            <span ng-if=" 100 > repo.stars && repo.stars > 0 " id="bg-color-green" ng-bind="repo.stars"></span>-->
+<!--            <span ng-if=" 1000 > repo.stars && repo.stars >= 100 " id="bg-color-orange" ng-bind="repo.stars"></span>-->
+<!--            <span ng-if=" repo.stars >= 1000" id="bg-color-red" ng-bind="repo.stars"></span>-->
+<!--                <stars v="repo.stars"/>-->
+
 
             <td>
                 <input type="button" value="edit" ng-click="openEditDialog(repo)"/>

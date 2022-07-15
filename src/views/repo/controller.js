@@ -15,9 +15,6 @@ const Controller = function ($scope, $uibModal, $http, repoService, $window) {
   })
   .finally(() => $scope.isLoadingRepos = false);
 
-
-  $scope.dateFormat = ((new Date().valueOf()))
-
   $scope.openEditDialog = (repo) => {
     console.log(repo)
     $uibModal.open({
